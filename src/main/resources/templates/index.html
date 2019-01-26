@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Access params in javascript</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" th:href="@{/css/style.css}"
+	href="../../css/style.css" />
+
+</head>
+<script type="text/javascript"
+	src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+	<div class="starter-template">
+		<h1>Access Spring MVC parameters from Javascript</h1>
+		<h2>
+			<span th:text="'Message: ' + ${message}"></span>
+		</h2>
+	</div>
+</body>
+</html>
