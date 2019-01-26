@@ -2,13 +2,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
-<title>Hello</title>
+<title>Access Spring MVC params</title>
 <script>
-var x = <c:out value="${name}"></c:out>;
+	var arr = ${array};
+	var item = ${item};
+	var number =  <c:out value="${number}"></c:out>;
+	var message = "<c:out value="${message}"></c:out>";
 </script>
+<script src="/js/script.js"></script>
 </head>
 <body>
-	JSP PAGE: Hello
-	<c:out value="${name}"></c:out>
+	array:
+	<c:out value="${array}"></c:out>
+	item: <c:out value="${item}"></c:out>
+	number: <c:out value="${number}"></c:out>
+	message: <c:out value="${message}"></c:out>
 </body>
 </html>
