@@ -3,19 +3,25 @@
 <html lang="en">
 <head>
 <title>Access Spring MVC params</title>
+<script src="/js/jquery.js"></script>	
+<script src="/js/script-async.js"></script>
+<script src="/js/script-async-jquery.js"></script>
 <script>
-	var arr = ${array};
-	var item = ${item};
-	var number =  <c:out value="${number}"></c:out>;
+	var number = <c:out value="${number}"></c:out>;
 	var message = "<c:out value="${message}"></c:out>";
 </script>
-<script src="/js/script.js"></script>
 </head>
 <body>
-	array:
-	<c:out value="${array}"></c:out>
-	item: <c:out value="${item}"></c:out>
-	number: <c:out value="${number}"></c:out>
-	message: <c:out value="${message}"></c:out>
+	<h2>Data from the external JS file (due to loading order)</h2>
+	<div id="number-ext"></div>
+	<div id="message-ext"></div>
+	<h2>Asynchronous loading from external JS file (plain JS)</h2>
+	<div id="number-async"></div>
+	<div id="message-async"></div>
+	<h2>Asynchronous loading from external JS file (jQuery)</h2>
+	<div id="number-async-jquery"></div>
+	<div id="message-async-jquery"></div>
+
 </body>
+<script src="/js/script.js"></script>
 </html>
